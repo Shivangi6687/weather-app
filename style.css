@@ -1,0 +1,96 @@
+/* Reset default margins */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(-45deg, #fceabb, #f8b500, #2bc0e4, #1b91e0);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  background: white;
+  padding: 30px 25px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+input {
+  padding: 12px;
+  width: 100%;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+button {
+  padding: 12px 20px;
+  margin-top: 15px;
+  font-size: 16px;
+  background-color: #66a6ff;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #4f88e3;
+}
+
+.weather-result {
+  margin-top: 25px;
+}
+
+#temperature, #description {
+  font-size: 18px;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+#weatherIcon {
+  margin-top: 10px;
+  width: 80px;
+  height: 80px;
+}
+
+/* Gradient animation */
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Make responsive for small devices */
+@media (max-width: 500px) {
+  .container {
+    padding: 20px;
+  }
+
+  input, button {
+    font-size: 14px;
+  }
+
+  #temperature, #description {
+    font-size: 16px;
+  }
+}
